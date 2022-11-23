@@ -48,7 +48,7 @@ function Topbar() {
 
   const webscrap = async () => {
     try {
-      const getProduct = await axios.get("http://localhost:3008/webscrap")
+      const getProduct = await axios.get("https://webscraphackathon.herokuapp.com/webscrap")
       setProduct(getProduct.data)
     } catch (error) {
       alert("product not found")
@@ -75,7 +75,7 @@ function Topbar() {
           return pro === productName
         }
 
-        const getProduct = await axios.get(prod.some(products) ? `http://localhost:3008/webscrap/${productName}` : alert("product not found"))
+        const getProduct = await axios.get(prod.some(products) ? `https://webscraphackathon.herokuapp.com/webscrap/${productName}` : alert("product not found"))
         setProduct(getProduct.data)
         // console.log(prod.some(products))
 
